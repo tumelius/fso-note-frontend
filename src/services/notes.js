@@ -1,5 +1,8 @@
 import axios from 'axios'
-const baseUrl = process.env.BASE_URL || 'http://localhost:3001/api/notes'
+const baseUrl = process.env.REACT_APP_BASE_URL || 'http://localhost:3001/api/notes'
+
+console.log('process.env.REACT_APP_BASE_URL', process.env.REACT_APP_BASE_URL)
+console.log('base url', baseUrl)
 
 const getAll = () => {
   const request = axios.get(baseUrl)
